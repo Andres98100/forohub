@@ -32,9 +32,4 @@ public class UserController {
         return ResponseEntity.created(uriComponentsBuilder.path("/user/{id}").buildAndExpand(user.getId()).toUri())
                 .body(dtoResponseUser);
     }
-
-    @GetMapping
-    public String getUser() {
-        return "user";
-    }
 }
